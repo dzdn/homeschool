@@ -1,13 +1,9 @@
 {% if user.is_authenticated %}
   Hi {{ user.email }}!
-<<<<<<< HEAD
   <form method="POST" action="{% url 'account_logout' %}">
     {% csrf_token %}
     <button type="submit">Sign Out</button>
   </form>
-=======
-  <p><a href="{% url 'account_logout' %}">Log Out</a></p>
->>>>>>> eef6597da02521d2ab340704a7d831ac14e79f89
 {% else %}
   <p>You are not logged in</p>
   <a href="{% url 'account_login' %}">Log In</a> |
